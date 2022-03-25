@@ -1,0 +1,19 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+type Schedule {
+    id: ID!
+    trainName: String!
+    location: String!
+    order: String!
+    Direction: Boolean!
+    Arrival: String!
+    Departure: String!
+}
+type Query {
+    singleSchedule(id: ID!): Schedule
+}
+type Mutation {
+    putSchedule(id: ID!, title: String!): Schedule
+}
