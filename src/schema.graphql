@@ -7,13 +7,13 @@ type Schedule {
     trainName: String!
     location: String!
     order: String!
-    Direction: Boolean!
-    Arrival: String!
-    Departure: String!
+    direction: Boolean!
+    arrival: String!
+    departure: String!
 }
 type Query {
-    singleSchedule(id: ID!): Schedule
+    singleSchdule(id: ID!): Schedule
 }
 type Mutation {
-    putSchedule(id: ID!, title: String!): Schedule
+    putSchedule(id: ID!, trainName: String!, location: String!, order: String!, direction: Boolean!, arrival: String!, departure: String!): Schedule
 }
